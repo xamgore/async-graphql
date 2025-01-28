@@ -27,6 +27,8 @@ mod datetime;
 mod decimal;
 #[cfg(feature = "chrono-duration")]
 mod duration;
+#[cfg(feature = "fastnum")]
+mod fastnum;
 #[cfg(feature = "chrono")]
 mod naive_time;
 #[cfg(feature = "secrecy")]
