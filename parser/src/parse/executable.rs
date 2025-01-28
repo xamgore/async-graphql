@@ -111,6 +111,7 @@ fn parse_definition_items(
         .collect::<Result<_>>()?)
 }
 
+#[derive(Debug)]
 enum DefinitionItem {
     Operation(Positioned<OperationDefinitionItem>),
     Fragment(Positioned<FragmentDefinitionItem>),
@@ -131,6 +132,7 @@ fn parse_definition_item(pair: Pair<Rule>, pc: &mut PositionCalculator) -> Resul
     })
 }
 
+#[derive(Debug)]
 struct OperationDefinitionItem {
     name: Option<Positioned<Name>>,
     definition: OperationDefinition,
@@ -366,6 +368,7 @@ fn parse_inline_fragment(
     ))
 }
 
+#[derive(Debug)]
 struct FragmentDefinitionItem {
     name: Positioned<Name>,
     definition: FragmentDefinition,

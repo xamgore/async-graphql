@@ -120,6 +120,7 @@ impl<'a> ExtensionContext<'a> {
     }
 }
 
+#[derive(Debug)]
 /// Parameters for `Extension::resolve_field_start`
 pub struct ResolveInfo<'a> {
     /// Current path node, You can go through the entire path.
